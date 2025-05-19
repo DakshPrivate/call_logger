@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: call-logger-server
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python server.py
+    envVars:
+      - key: FLASK_ENV
+        value: production
+        
